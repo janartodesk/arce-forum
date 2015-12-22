@@ -264,7 +264,7 @@ a {
             color: @bg-base;
         }
         &:hover {
-            color: @color5;
+            color: darken(@bg-base, 24%);
         }
         &:active {
             color: @black;
@@ -470,8 +470,12 @@ a {
             }
         }
     }
+    .fora-stats {
+        font-size: 12px;
+    }
     dfn {
         color: @color5;
+        font-size: inherit;
     }
 }
 .fora-icon {
@@ -612,7 +616,7 @@ a {
 .forum-bg li:hover .topic_unread div, .forum-bg li:hover .topic_unread_mine div, .forum-bg li:hover .topic_unread_locked div, .forum-bg li:hover .topic_unread_locked_mine div, .forum-bg li:hover .topic_unread_hot div, .forum-bg li:hover .topic_unread_hot_mine div, .forum-bg li:hover .sticky_unread div, .forum-bg li:hover .sticky_unread_locked div, .forum-bg li:hover .sticky_unread_locked_mine div, .forum-bg li:hover .sticky_unread_mine div, .forum-bg li:hover .announce_unread div, .forum-bg li:hover .announce_unread_locked div, .forum-bg li:hover .announce_unread_locked_mine div, .forum-bg li:hover .announce_unread_mine div, .forum-bg li:hover .global_unread div, .forum-bg li:hover .global_unread_locked div, .forum-bg li:hover .global_unread_locked_mine div, .forum-bg li:hover .global_unread_mine div  {
     background-color: @color10;
 }
-.postbody {
+.postbody, #cp-main-inner {
     background-color: @white;
     border-color: @color9;
     box-shadow: 0px 0px 6px @shadow-content-block;
@@ -657,14 +661,17 @@ a {
         color: @bg-base;
     }
 }
+
 .poster-online {
     background-color: @color16;
     border-color: @bg-base;
 }
 .dropdown-profile {
+    font-size: 10px;
     background-color: @white;
     box-shadow: 0 0 30px @shadow-normal;
 }
+
 .profile-contact {
     background-color: @bg-base-darker;
     border-color: @bg-base-dark;
@@ -709,17 +716,23 @@ a {
         }
     }
 }
-.avatar-none {
-    background-color: @bg-base-dark;
-    color: @bg-dark;
-    .username-coloured {
-        color: @bg-dark !important;
-        &:hover {
+.avatar-container {
+    .avatar-none {
+        background-color: @bg-base-dark;
+        color: @bg-dark;
+
+        .username-coloured {
             color: @bg-dark !important;
+            &:hover {
+                color: @bg-dark !important;
+            }
+            &:active {
+                color: @bg-dark !important;
+            }
         }
-        &:active {
-            color: @bg-dark !important;
-        }
+    }
+    a {
+        font-size: 14px;
     }
 }
 .preview-signature {
@@ -972,30 +985,17 @@ a.button {
     background-color: @color11 !important;
     box-shadow: none !important;
 }
-.button-flat {
+.button-flat, a.button-flat {
     background-color: transparent;
     color: @font-base;
     &:hover {
-        box-shadow: 0 2px 5px @shadow-darker;
+        background-color: @bg-base-darker;
     }
     &:focus {
         background-color: @bg-base-dark;
-        box-shadow: none;
     }
     &:active {
         background-color: @bg-base-dark;
-        box-shadow: none;
-    }
-}
-a.button-flat {
-    background-color: transparent;
-    color: @font-base;
-    &:hover {
-        box-shadow: 0 2px 5px @shadow-darker;
-    }
-    &:active {
-        background-color: @bg-base-dark;
-        box-shadow: none;
     }
 }
 .button-round {
@@ -1037,11 +1037,10 @@ a.button-round {
         background-color: @main-accent;
         color: @bg-base;
         &:hover {
-            box-shadow: 0 2px 5px @shadow-darker;
+            background-color: @color11;
         }
         &:active {
             background-color: @color11;
-            box-shadow: none;
         }
     }
 }
@@ -1353,6 +1352,31 @@ blockquote {
     }
     #active-subsection>a {
         background-color: @bg-base-dark;
+    }
+}
+#cp-main-inner {
+    border-radius: 2px;
+    padding: 18px;
+
+    fieldset {
+        border-top: 1px solid @bg-base-darker;
+        padding: 18px 9px;
+
+        &:first-child {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        &.actions-submit,
+        &.action-buttons {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .cp-list {
+        box-shadow: none;
+        border: none;
     }
 }
 .cp-sidebar-block {
