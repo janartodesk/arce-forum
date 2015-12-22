@@ -1,0 +1,17 @@
+phpbb:
+  image: vimagick/phpbb
+  volumes:
+    - ./phpbb:/var/www/html
+    - ./styles:/var/www/html/styles
+    - ./extensions:/var/www/html/ext
+  ports:
+    - 8000:80
+  links:
+    - database:db
+database:
+  image: mysql:latest
+  environment:
+    - MYSQL_ROOT_PASSWORD=phpbb
+    - MYSQL_DATABASE=phpbb
+    - MYSQL_USER=phpbb
+    - MYSQL_DATABASE=phpbb
