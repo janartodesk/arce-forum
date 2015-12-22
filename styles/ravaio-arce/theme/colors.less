@@ -316,6 +316,7 @@ a {
 .dropdown-search {
     background-color: @white;
     box-shadow: 0 0 30px @shadow-normal;
+    padding: 6px;
     input {
         background-color: @bg-base-dark;
     }
@@ -757,10 +758,17 @@ a {
             color: @color5;
         }
     }
+    form {
+        padding: 0 6px;
+    }
 }
 .dropdown-box-big {
     background-color: @white;
     box-shadow: 0 0 30px @shadow-normal;
+
+    form {
+        padding: 0 6px;
+    }
 }
 .dropdown-body {
     color: @font-base;
@@ -812,8 +820,11 @@ a {
     }
 }
 .dropdown-header {
-    background-color: @bg-base-dark;
+    border-bottom: 1px solid @bg-base-darker;
     color: @font-base;
+    h5 {
+        font-weight: bold;
+    }
     a {
         color: @font-base;
         &:hover {
