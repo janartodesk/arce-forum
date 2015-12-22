@@ -11,20 +11,22 @@
 @white-18: rgba(255, 255, 255, 0.18);
 
 // Colors
-@color0: #fcfcfc;  // base-bg
-@color12: #f0f0f0;  // base-bg darker
-@color2: #d0d0d0;  // base-bg darkest, base splitters
-@color1: #242424;  // base font-face
-@color3: #2c2c2c;  // main accents highlight
-@color4: #222222;  // main accents
-@color5: #dbdbdb;
-@color6: #666;  // base-bg darker
-@color7: #ffffff;
-@color8: #030303;
+@bg-base: #f0f0f0;  // base-bg
+@bg-base-darker: darken(@bg-base, 6%);  // base-bg darker
+@bg-base-dark: darken(@bg-base, 12%);  // base-bg darkest, base splitters
+@bg-dark: #666;  // base-bg darker
+
+@font-base: #242424;  // base font-face
+@main-accent: #2c2c2c;  // main accents highlight, link highlight
+@main-accent-highlight: #222222;  // main accents, link base
+
+@color5: #666;  // de-emphasized elements
+@color7: #ffffff;  // header highlight
+@color8: #030303; // link visited
 @color9: #d9d9d9;  // splitter lighter
 @color10: #f44336;
 @color11: #0d0d0d;
-@color13: #d32f2f;  // notifications
+@color13: #cc1d11;  // notifications
 @color14: #ff9800;
 @color15: #666;  // post-date
 @color16: #388e3c;
@@ -45,24 +47,24 @@
 
 
 body {
-    background-color: @color0;
-    color: @color1;
+    background-color: @bg-base;
+    color: @font-base;
 }
 html {
-    background-color: @color0;
-    color: @color1;
+    background-color: @bg-base;
+    color: @font-base;
 }
 select {
     background-color: transparent;
     border-color: @color5;
 }
 a {
-    color: @color4;
+    color: @main-accent-highlight;
     &:visited {
-        color: @color4;
+        color: @main-accent-highlight;
     }
     &:hover {
-        color: @color3;
+        color: @main-accent;
     }
     &:active {
         color: @color8;
@@ -80,23 +82,23 @@ a {
     }
 }
 .site-header {
-    color: @color0;
+    color: @bg-base;
     a {
-        color: @color0;
+        color: @bg-base;
         &:hover {
-            color: @color5;
+            color: @main-accent;
         }
         &:active {
-            color: @color6;
+            color: @font-base;
         }
     }
     span {
-        color: @color0;
+        color: @bg-base;
         &:hover {
-            color: @color5;
+            color: @main-accent;
         }
         &:active {
-            color: @color6;
+            color: @font-base;
         }
     }
 }
@@ -110,57 +112,57 @@ a {
 .site-nav {
     .count {
         background-color: @color10;
-        color: @color0;
+        color: @bg-base;
     }
 }
 #header-avatar>span {
     background-color: @shadow-dark;
-    color: @color0 !important;
+    color: @bg-base !important;
 }
 #header-avatar {
     &:hover>span {
-        background-color: @color5;
-        color: @color1 !important;
+        background-color: @white-18;
+        color: @font-base !important;
     }
     &:active>span {
-        background-color: @color6;
-        color: @color1 !important;
+        background-color: @white-18;
+        color: @font-base !important;
     }
     img {
         border-color: @shadow-normal;
     }
     &:hover {
         img {
-            border-color: @color5;
+            border-color: @white-18;
         }
     }
     &:active {
         img {
-            border-color: @color6;
+            border-color: @white-18;
         }
     }
 }
 .open {
     #header-avatar>span {
-        background-color: @color6;
-        color: @color1 !important;
+        background-color: @white-18;
+        color: @font-base !important;
     }
     #header-avatar {
         img {
-            border-color: @color6;
+            border-color: @white-18;
         }
     }
 }
 #header-mini-menu {
     background-color: @shadow-normal;
-    color: @color0;
+    color: @bg-base;
     &:hover {
         background-color: @white-18;
-        color: @color1 !important;
+        color: @font-base !important;
     }
     &:active {
         background-color: @white-18;
-        color: @color1 !important;
+        color: @font-base !important;
     }
 }
 .is-sticky #header-mini-menu {
@@ -179,11 +181,11 @@ a {
 }
 #wrap-footer {
     background-color: @color8;
-    color: @color6;
+    color: @bg-dark;
     a {
-        color: @color0;
+        color: @bg-base;
         &:visited {
-            color: @color0;
+            color: @bg-base;
         }
         &:hover {
             color: @color5;
@@ -194,20 +196,20 @@ a {
     }
 }
 .background-main {
-    background-color: @color0;
+    background-color: @bg-base;
     .box-normal {
         background-color: @color7;
         border-color: @color9;
         box-shadow: 0px 0px 6px @shadow-content-block;
-        color: @color1;
+        color: @font-base;
         .strong-head {
             border-color: @shadow-content-block;
         }
     }
 }
 .background-deep {
-    background-color: @color2;
-    color: @color4;
+    background-color: @bg-base-dark;
+    color: @main-accent-highlight;
     .box-normal {
         background-color: @color27;
         border-color: @color25;
@@ -218,11 +220,11 @@ a {
         }
     }
     h3 {
-        color: @color4;
+        color: @main-accent-highlight;
         a {
-            color: @color4;
+            color: @main-accent-highlight;
             &:hover {
-                color: @color3;
+                color: @main-accent;
             }
             &:active {
                 color: @color8;
@@ -232,35 +234,35 @@ a {
 }
 #information {
     background-color: @color10;
-    color: @color0;
+    color: @bg-base;
 }
 #site-desc-full {
-    background-color: @color8;
+    background-color: @main-accent-highlight;
     h1 {
-        color: @color0;
+        color: @bg-base;
     }
     h2 {
-        color: @color0;
+        color: @bg-base;
     }
 }
 #site-desc-small {
-    background-color: @color8;
+    background-color: @main-accent-highlight;
     h1 {
-        color: @color0;
+        color: @bg-base;
     }
     h2 {
-        color: @color0;
+        color: @bg-base;
     }
 }
 #sub-header {
-    background-color: @color8;
+    background-color: @main-accent-highlight;
 }
 .sub-header-title {
-    color: @color0;
+    color: @bg-base;
     a {
-        color: @color0;
+        color: @bg-base;
         &:visited {
-            color: @color0;
+            color: @bg-base;
         }
         &:hover {
             color: @color5;
@@ -270,41 +272,41 @@ a {
         }
     }
     p {
-        color: @color6;
+        color: @bg-dark;
     }
 }
 .sub-header-buttons {
     .button-round {
-        color: @color0;
+        color: @bg-base;
         &:hover {
             background-color: @white-10;
-            color: @color0;
+            color: @bg-base;
         }
         &:active {
             background-color: @shadow-lighter;
-            color: @color0;
+            color: @bg-base;
         }
     }
     .open>.button-round {
         background-color: @shadow-lighter !important;
-        color: @color0 !important;
+        color: @bg-base !important;
     }
     .chosen-single {
-        color: @color0;
+        color: @bg-base;
         &:hover {
-            color: @color0;
+            color: @bg-base;
         }
         &:active {
-            color: @color0;
+            color: @bg-base;
         }
     }
 }
 #main-search-box-md {
     input {
-        background-color: @color2;
+        background-color: @bg-base-dark;
     }
     button {
-        background-color: @color2;
+        background-color: @bg-base-dark;
     }
 }
 .sidebar-block {
@@ -316,14 +318,14 @@ a {
     background-color: @color7;
     box-shadow: 0 0 30px @shadow-normal;
     input {
-        background-color: @color2;
+        background-color: @bg-base-dark;
     }
 }
 .action-bar-top {
-    border-bottom-color: @color2;
+    border-bottom-color: @bg-base-dark;
 }
 .action-bar-bottom {
-    border-top-color: @color2;
+    border-top-color: @bg-base-dark;
 }
 .pagination {
     li {
@@ -331,24 +333,24 @@ a {
             &:hover {
                 background-color: @color7;
                 box-shadow: 0 2px 5px @shadow-darker;
-                color: @color1;
+                color: @font-base;
             }
             &:active {
-                background-color: @color2;
+                background-color: @bg-base-dark;
                 box-shadow: none;
-                color: @color1;
+                color: @font-base;
             }
         }
         span {
             &:hover {
                 background-color: @color7;
                 box-shadow: 0 2px 5px @shadow-darker;
-                color: @color1;
+                color: @font-base;
             }
             &:active {
-                background-color: @color2;
+                background-color: @bg-base-dark;
                 box-shadow: none;
-                color: @color1;
+                color: @font-base;
             }
         }
     }
@@ -365,9 +367,9 @@ a {
     }
     .active {
         span {
-            background-color: @color2;
+            background-color: @bg-base-dark;
             &:hover {
-                background-color: @color2;
+                background-color: @bg-base-dark;
                 box-shadow: none;
             }
         }
@@ -376,50 +378,50 @@ a {
 .pagination-small {
     li {
         a {
-            border-color: @color2;
+            border-color: @bg-base-dark;
         }
         span {
-            border-color: @color2;
+            border-color: @bg-base-dark;
         }
     }
 }
 .member-search {
-    background-color: @color4;
+    background-color: @main-accent-highlight;
     a {
-        color: @color0;
+        color: @bg-base;
         &:visited {
-            color: @color0;
+            color: @bg-base;
         }
     }
 }
 .search-box {
     input {
         background-color: transparent;
-        border-color: @color4;
-        color: @color0;
+        border-color: @main-accent-highlight;
+        color: @bg-base;
         &::-moz-placeholder {
             color: @white-18;
         }
         &:hover {
-            border-color: @color3;
+            border-color: @main-accent;
         }
         &:focus {
-            border-color: @color3;
+            border-color: @main-accent;
         }
     }
     button {
         background-color: transparent;
-        color: @color0;
+        color: @bg-base;
     }
 }
 .fora-bg {
     border-color: @color9;
     box-shadow: 0px 0px 6px @shadow-content-block;
     h3 {
-        background-color: @color4;
-        color: @color0;
+        background-color: @main-accent-highlight;
+        color: @bg-base;
         a {
-            color: @color0;
+            color: @bg-base;
             &:hover {
                 color: @color5;
             }
@@ -429,11 +431,11 @@ a {
         }
     }
     h4 {
-        color: @color4;
+        color: @main-accent-highlight;
         a {
-            color: @color4;
+            color: @main-accent-highlight;
             &:hover {
-                color: @color3;
+                color: @main-accent;
             }
             &:active {
                 color: @color8;
@@ -447,9 +449,9 @@ a {
         }
         &:hover {
             .fora-icon {
-                color: @color0;
+                color: @bg-base;
                 div {
-                    background-color: @color3;
+                    background-color: @main-accent;
                 }
             }
             .forum_unread {
@@ -474,7 +476,7 @@ a {
     }
 }
 .fora-icon {
-    color: @color4;
+    color: @main-accent-highlight;
     div {
         background-color: transparent;
     }
@@ -492,25 +494,25 @@ a {
     }
 }
 .forum_unread {
-    color: @color0;
+    color: @bg-base;
     div {
         background-color: @color13;
     }
 }
 .forum_unread_locked {
-    color: @color0;
+    color: @bg-base;
     div {
         background-color: @color13;
     }
 }
 .forum_unread_subforum {
-    color: @color0;
+    color: @bg-base;
     div {
         background-color: @color13;
     }
 }
 .fora-stats-sm {
-    color: @color6;
+    color: @bg-dark;
 }
 .subforums-list {
     &:after {
@@ -523,7 +525,7 @@ a {
         color: @color14;
     }
     &:hover {
-        color: @color3;
+        color: @main-accent;
     }
     &:active {
         color: @color8;
@@ -533,10 +535,10 @@ a {
     border-color: @color9;
     box-shadow: 0px 0px 6px @shadow-content-block;
     h3 {
-        background-color: @color4;
-        color: @color0;
+        background-color: @main-accent-highlight;
+        color: @bg-base;
         a {
-            color: @color0;
+            color: @bg-base;
             &:hover {
                 color: @color5;
             }
@@ -546,11 +548,11 @@ a {
         }
     }
     h4 {
-        color: @color4;
+        color: @main-accent-highlight;
         a {
-            color: @color4;
+            color: @main-accent-highlight;
             &:hover {
-                color: @color3;
+                color: @main-accent;
             }
             &:active {
                 color: @color8;
@@ -561,15 +563,15 @@ a {
         background-color: @color7;
         &:hover {
             .topic-icon {
-                color: @color0;
+                color: @bg-base;
                 div {
-                    background-color: @color3;
+                    background-color: @main-accent;
                 }
             }
         }
     }
     ol>li+li {
-        border-color: @color2;
+        border-color: @bg-base-dark;
     }
     dfn {
         color: @color5;
@@ -578,20 +580,20 @@ a {
         background-color: @color26;
     }
     .deleted {
-        background-color: @color12;
+        background-color: @bg-base-darker;
         &:hover {
             background-color: @color7;
         }
     }
 }
 .topic-icon {
-    color: @color4;
+    color: @main-accent-highlight;
     div {
         background-color: transparent;
     }
 }
 .topic-stats-sm {
-    color: @color6;
+    color: @bg-dark;
 }
 .topic-unapproved-icon {
     color: @color14;
@@ -603,7 +605,7 @@ a {
     color: @color10;
 }
 .topic_unread, .topic_unread_mine, .topic_unread_locked, .topic_unread_locked_mine, .topic_unread_hot, .topic_unread_hot_mine, .sticky_unread .sticky_unread_locked, .sticky_unread_locked_mine, .sticky_unread_mine, .announce_unread, .announce_unread_locked, .announce_unread_locked_mine, .announce_unread_mine, .global_unread, .global_unread_locked, .global_unread_locked_mine, .global_unread_mine  {
-    color: @color0;
+    color: @bg-base;
 }
 .topic_unread div, .topic_unread_mine div, .topic_unread_locked div, .topic_unread_locked_mine div, .topic_unread_hot div, .topic_unread_hot_mine div, .sticky_unread div, .sticky_unread_locked div, .sticky_unread_locked_mine div, .sticky_unread_mine div, .announce_unread div, .announce_unread_locked div, .announce_unread_locked_mine div, .announce_unread_mine div, .global_unread div, .global_unread_locked div, .global_unread_locked_mine div, .global_unread_mine div  {
     background-color: @color13;
@@ -628,21 +630,21 @@ a {
 }
 .post-deleted-notice {
     input {
-        background-color: @color2;
-        color: @color1;
+        background-color: @bg-base-dark;
+        color: @font-base;
     }
 }
 .post-unapproved-notice {
     input {
-        background-color: @color2;
-        color: @color1;
+        background-color: @bg-base-dark;
+        color: @font-base;
     }
 }
 .post-reported-notice {
     background-color: @color17;
 }
 .attachbox {
-    background-color: @color12;
+    background-color: @bg-base-darker;
     border-color: @color5;
 }
 .g-image {
@@ -650,20 +652,20 @@ a {
         background-color: rgba(0, 0, 0, 0.6);
     }
     &:before {
-        color: @color0;
+        color: @bg-base;
     }
 }
 .poster-online {
     background-color: @color16;
-    border-color: @color7;
+    border-color: @bg-base;
 }
 .dropdown-profile {
     background-color: @color7;
     box-shadow: 0 0 30px @shadow-normal;
 }
 .profile-contact {
-    background-color: @color12;
-    border-color: @color2;
+    background-color: @bg-base-darker;
+    border-color: @bg-base-dark;
 }
 .member-online {
     color: @color16;
@@ -674,23 +676,23 @@ a {
         color: @color15;
     }
     &:hover {
-        color: @color3;
+        color: @main-accent;
     }
     &:active {
         color: @color8;
     }
 }
 .post-signature {
-    border-color: @color2;
+    border-color: @bg-base-dark;
 }
 .post-actions {
-    background-color: @color12;
-    border-color: @color2;
+    background-color: @bg-base-darker;
+    border-color: @bg-base-dark;
 }
 .post-date {
     color: @color15;
     &:hover {
-        color: @color3;
+        color: @main-accent;
     }
     a {
         color: @color15;
@@ -698,7 +700,7 @@ a {
             color: @color15;
         }
         &:hover {
-            color: @color3;
+            color: @main-accent;
         }
         &:active {
             color: @color8;
@@ -706,15 +708,15 @@ a {
     }
 }
 .avatar-none {
-    background-color: @color2;
-    color: @color6;
+    background-color: @bg-base-dark;
+    color: @bg-dark;
     .username-coloured {
-        color: @color6 !important;
+        color: @bg-dark !important;
         &:hover {
-            color: @color6 !important;
+            color: @bg-dark !important;
         }
         &:active {
-            color: @color6 !important;
+            color: @bg-dark !important;
         }
     }
 }
@@ -725,15 +727,15 @@ a {
 .dropdown-box {
     background-color: @color7;
     box-shadow: 0 0 30px @shadow-normal;
-    color: @color1;
+    color: @font-base;
     .separator {
-        border-color: @color2;
+        border-color: @bg-base-dark;
     }
     a {
-        color: @color1;
+        color: @font-base;
         &:hover {
-            background-color: @color2;
-            color: @color1;
+            background-color: @bg-base-dark;
+            color: @font-base;
         }
         &:active {
             background-color: @color8;
@@ -746,12 +748,12 @@ a {
     box-shadow: 0 0 30px @shadow-normal;
 }
 .dropdown-body {
-    color: @color1;
+    color: @font-base;
     a {
-        color: @color1;
+        color: @font-base;
         &:hover {
-            background-color: @color2;
-            color: @color1;
+            background-color: @bg-base-dark;
+            color: @font-base;
         }
         &:active {
             background-color: @color8;
@@ -759,31 +761,31 @@ a {
         }
     }
     li {
-        border-color: @color2;
+        border-color: @bg-base-dark;
     }
     .notification-title {
         .username {
-            color: @color1 !important;
+            color: @font-base !important;
         }
         .username-coloured {
-            color: @color1 !important;
+            color: @font-base !important;
         }
     }
     .notification-time {
-        color: @color6;
+        color: @bg-dark;
     }
     .notification-mark {
-        background-color: @color3;
-        color: @color0;
+        background-color: @main-accent;
+        color: @bg-base;
         &:hover {
-            background-color: @color3;
+            background-color: @main-accent;
             box-shadow: 0px 2px 5px @shadow-darker;
-            color: @color0;
+            color: @bg-base;
         }
         &:active {
             background-color: @color11;
             box-shadow: none;
-            color: @color0;
+            color: @bg-base;
         }
     }
     .chosen-drop {
@@ -795,12 +797,12 @@ a {
     }
 }
 .dropdown-header {
-    background-color: @color2;
-    color: @color1;
+    background-color: @bg-base-dark;
+    color: @font-base;
     a {
-        color: @color1;
+        color: @font-base;
         &:hover {
-            color: @color3;
+            color: @main-accent;
         }
         &:active {
             color: @color5;
@@ -809,32 +811,32 @@ a {
 }
 .dropdown-footer {
     a {
-        background-color: @color2;
-        color: @color1;
+        background-color: @bg-base-dark;
+        color: @font-base;
         &:hover {
-            background-color: @color3;
-            color: @color0;
+            background-color: @main-accent;
+            color: @bg-base;
         }
     }
     input {
-        background-color: @color2;
-        color: @color1;
+        background-color: @bg-base-dark;
+        color: @font-base;
         &:hover {
-            background-color: @color3;
-            color: @color0;
+            background-color: @main-accent;
+            color: @bg-base;
         }
     }
 }
 .dropdown-footer a:active, .dropdown-footer input:active, .dropdown-footer a:focus, .dropdown-footer input:focus  {
-    background-color: @color4;
-    color: @color0;
+    background-color: @main-accent-highlight;
+    color: @bg-base;
 }
 .live-search {
     .search-result {
-        color: @color1;
+        color: @font-base;
         &:hover {
-            background-color: @color2;
-            color: @color1;
+            background-color: @bg-base-dark;
+            color: @font-base;
         }
         &:active {
             background-color: @color8;
@@ -845,9 +847,9 @@ a {
 .input {
     background-color: transparent;
     border-color: @color5;
-    color: @color1;
+    color: @font-base;
     &:hover {
-        border-color: @color3;
+        border-color: @main-accent;
     }
     &:focus {
         border-color: @color11;
@@ -863,49 +865,49 @@ input {
 }
 span.radio {
     background-color: transparent;
-    border-color: @color4;
+    border-color: @main-accent-highlight;
 }
 input.radio {
     &:checked+span.radio {
-        background-color: @color4;
+        background-color: @main-accent-highlight;
     }
     &:disabled+span.radio {
         background-color: transparent !important;
-        border-color: @color6 !important;
+        border-color: @bg-dark !important;
     }
 }
 label {
     &:hover>span.radio {
-        border-color: @color3;
+        border-color: @main-accent;
     }
     &:hover>input.radio {
         checked+span.radio {
-            background-color: @color3;
-            border-color: @color3;
+            background-color: @main-accent;
+            border-color: @main-accent;
         }
     }
     &:active>span.radio {
-        background-color: @color4 !important;
-        border-color: @color4 !important;
+        background-color: @main-accent-highlight !important;
+        border-color: @main-accent-highlight !important;
     }
     &:active>input.radio {
         disabled+span.radio {
             background-color: transparent !important;
-            border-color: @color6 !important;
+            border-color: @bg-dark !important;
         }
     }
     &:hover>span.check {
-        border-color: @color3;
+        border-color: @main-accent;
     }
     &:hover>input.check {
         checked+span.check {
-            background-color: @color3;
-            border-color: @color3;
+            background-color: @main-accent;
+            border-color: @main-accent;
         }
     }
     &:active>span.check {
-        background-color: @color4 !important;
-        border-color: @color4 !important;
+        background-color: @main-accent-highlight !important;
+        border-color: @main-accent-highlight !important;
     }
 }
 span.radio-full {
@@ -914,31 +916,31 @@ span.radio-full {
         box-shadow: 0 2px 5px @shadow-darker;
     }
     &:active {
-        background-color: @color2;
+        background-color: @bg-base-dark;
         box-shadow: none;
     }
 }
 input.radio-full {
     &:checked+span.radio-full {
-        background-color: @color2;
+        background-color: @bg-base-dark;
         box-shadow: none;
     }
 }
 span.check {
     background-color: transparent;
-    border-color: @color4;
+    border-color: @main-accent-highlight;
     &:after {
-        color: @color0;
+        color: @bg-base;
     }
 }
 input.check {
     &:checked+span.check {
-        background-color: @color4;
+        background-color: @main-accent-highlight;
     }
 }
 .button {
-    background-color: @color3;
-    color: @color0;
+    background-color: @main-accent;
+    color: @bg-base;
     &:hover {
         background-color: @color13;
         // box-shadow: 0 2px 5px @shadow-darker;
@@ -953,8 +955,8 @@ input.check {
     }
 }
 a.button {
-    background-color: @color3;
-    color: @color0;
+    background-color: @main-accent;
+    color: @bg-base;
     &:hover {
         background-color: @color13;
         // box-shadow: 0 2px 5px @shadow-darker;
@@ -970,66 +972,66 @@ a.button {
 }
 .button-flat {
     background-color: transparent;
-    color: @color1;
+    color: @font-base;
     &:hover {
         box-shadow: 0 2px 5px @shadow-darker;
     }
     &:focus {
-        background-color: @color2;
+        background-color: @bg-base-dark;
         box-shadow: none;
     }
     &:active {
-        background-color: @color2;
+        background-color: @bg-base-dark;
         box-shadow: none;
     }
 }
 a.button-flat {
     background-color: transparent;
-    color: @color1;
+    color: @font-base;
     &:hover {
         box-shadow: 0 2px 5px @shadow-darker;
     }
     &:active {
-        background-color: @color2;
+        background-color: @bg-base-dark;
         box-shadow: none;
     }
 }
 .button-round {
     background-color: transparent;
-    color: @color1;
+    color: @font-base;
     &:hover {
         background-color: @color7;
         box-shadow: 0 2px 5px @shadow-darker;
     }
     &:focus {
-        background-color: @color2;
+        background-color: @bg-base-dark;
         box-shadow: none;
     }
     &:active {
-        background-color: @color2;
+        background-color: @bg-base-dark;
         box-shadow: none;
     }
 }
 a.button-round {
     background-color: transparent;
-    color: @color1;
+    color: @font-base;
     &:hover {
         background-color: @color7;
         box-shadow: 0 2px 5px @shadow-darker;
     }
     &:active {
-        background-color: @color2;
+        background-color: @bg-base-dark;
         box-shadow: none;
     }
 }
 .open>.button-round {
-    background-color: @color2 !important;
+    background-color: @bg-base-dark !important;
     box-shadow: none !important;
 }
 .button-multiple {
     a {
-        background-color: @color3;
-        color: @color0;
+        background-color: @main-accent;
+        color: @bg-base;
         &:hover {
             box-shadow: 0 2px 5px @shadow-darker;
         }
@@ -1052,7 +1054,7 @@ a.button-round {
 }
 .username {
     &:hover {
-        color: @color3 !important;
+        color: @main-accent !important;
     }
     &:active {
         color: @color8 !important;
@@ -1060,7 +1062,7 @@ a.button-round {
 }
 .username-coloured {
     &:hover {
-        color: @color3 !important;
+        color: @main-accent !important;
     }
     &:active {
         color: @color8 !important;
@@ -1078,72 +1080,72 @@ a.button-round {
     box-shadow: 0px 0px 6px @shadow-content-block;
 }
 .quickreply-buttons {
-    background-color: @color12;
-    border-color: @color2;
+    background-color: @bg-base-darker;
+    border-color: @bg-base-dark;
     button {
         background-color: transparent;
-        color: @color1;
+        color: @font-base;
         display: inline-block;
     }
 }
 .dimmed {
-    color: @color6;
+    color: @bg-dark;
 }
 blockquote {
-    background-color: @color12;
-    border-color: @color2;
+    background-color: @bg-base-darker;
+    border-color: @bg-base-dark;
 }
 .codebox {
-    background-color: @color12;
-    border-color: @color2;
+    background-color: @bg-base-darker;
+    border-color: @bg-base-dark;
 }
 .post-content {
-    border-color: @color2;
+    border-color: @bg-base-dark;
 }
 .posthilit {
-    background-color: @color3;
-    color: @color0;
+    background-color: @main-accent;
+    color: @bg-base;
 }
 .details {
     dt {
-        color: @color6;
+        color: @bg-dark;
     }
 }
 .faq {
     dt {
-        color: @color6;
+        color: @bg-dark;
     }
 }
 .form {
     dt {
         span {
-            color: @color1;
+            color: @font-base;
         }
         p {
-            color: @color6;
+            color: @bg-dark;
         }
     }
 }
 .poll-option-title {
     span.votes {
-        color: @color6;
+        color: @bg-dark;
     }
 }
 .poll-option-resultbar {
     background-color: @shadow-content-block;
     div {
-        background-color: @color3;
+        background-color: @main-accent;
     }
 }
 .background-normal {
-    background-color: @color0;
-    color: @color4;
+    background-color: @bg-base;
+    color: @main-accent-highlight;
     h3 {
-        color: @color4;
+        color: @main-accent-highlight;
         a {
-            color: @color4;
+            color: @main-accent-highlight;
             &:hover {
-                color: @color3;
+                color: @main-accent;
             }
             &:active {
                 color: @color8;
@@ -1161,38 +1163,38 @@ blockquote {
         background-color: @color7;
         border-color: @color22;
         box-shadow: 0px 0px 1px @shadow-lighter;
-        color: @color1;
+        color: @font-base;
         &:hover {
             box-shadow: 0px 2px 5px @shadow-dark;
-            color: @color1;
+            color: @font-base;
         }
         &:active {
-            background-color: @color2;
-            border-color: @color2;
+            background-color: @bg-base-dark;
+            border-color: @bg-base-dark;
             box-shadow: none;
-            color: @color1;
+            color: @font-base;
         }
     }
 }
 .modal-content {
     background-color: @color7;
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.13);
+    box-shadow: 0 0 0 @shadow-darkest;
 }
 .modal-body {
     .w-input {
-        color: @color6;
+        color: @bg-dark;
     }
 }
 .modal-backdrop {
-    background-color: rgba(48, 89, 122, 0.6);
+    background-color: @shadow-darkest;
 }
 .modal-close {
     background-color: transparent;
-    color: @color1;
+    color: @font-base;
 }
 .modal-bb-close {
     background-color: transparent;
-    color: @color1;
+    color: @font-base;
 }
 .error {
     color: @color10;
@@ -1209,27 +1211,27 @@ blockquote {
 }
 .chosen-single {
     border-bottom-color: @color5;
-    color: @color1;
+    color: @font-base;
     &:hover {
-        border-bottom-color: @color3;
-        color: @color1;
+        border-bottom-color: @main-accent;
+        color: @font-base;
     }
     &:focus {
         border-color: @color11;
-        color: @color1;
+        color: @font-base;
     }
 }
 .chosen-choices {
     &:hover {
         input {
-            border-bottom-color: @color3;
-            color: @color1;
+            border-bottom-color: @main-accent;
+            color: @font-base;
         }
     }
     &:focus {
         input {
             border-color: @color11;
-            color: @color1;
+            color: @font-base;
         }
     }
 }
@@ -1237,33 +1239,33 @@ blockquote {
     input {
         background-color: transparent;
         border-bottom-color: @color5;
-        color: @color1;
+        color: @font-base;
         &:hover {
-            border-bottom-color: @color3;
-            color: @color1;
+            border-bottom-color: @main-accent;
+            color: @font-base;
         }
         &:focus {
             border-color: @color11;
-            color: @color1;
+            color: @font-base;
         }
     }
 }
 .search-choice {
-    background-color: @color4;
-    color: @color0;
+    background-color: @main-accent-highlight;
+    color: @bg-base;
 }
 .search-choice-close {
-    color: @color0;
+    color: @bg-base;
 }
 .chosen-drop {
     background-color: @color7;
     box-shadow: 0 0 30px @shadow-normal;
-    color: @color1;
+    color: @font-base;
     li {
-        color: @color1;
+        color: @font-base;
         &:hover {
-            background-color: @color2;
-            color: @color1;
+            background-color: @bg-base-dark;
+            color: @font-base;
         }
         &:active {
             background-color: @color8;
@@ -1271,32 +1273,32 @@ blockquote {
         }
     }
     li.result-selected {
-        color: @color6;
+        color: @bg-dark;
         &:hover {
             background-color: transparent;
-            color: @color6;
+            color: @bg-dark;
         }
         &:active {
             background-color: transparent;
-            color: @color6;
+            color: @bg-dark;
         }
     }
 }
 .chosen-search {
     input {
-        background-color: @color2;
+        background-color: @bg-base-dark;
     }
 }
 .group-result {
-    background-color: @color2 !important;
-    color: @color1 !important;
+    background-color: @bg-base-dark !important;
+    color: @font-base !important;
     &:hover {
-        background-color: @color2 !important;
-        color: @color1 !important;
+        background-color: @bg-base-dark !important;
+        color: @font-base !important;
     }
     &:active {
-        background-color: @color2 !important;
-        color: @color1 !important;
+        background-color: @bg-base-dark !important;
+        color: @font-base !important;
     }
 }
 #message-box {
@@ -1305,27 +1307,27 @@ blockquote {
     box-shadow: 0px 0px 6px @shadow-content-block;
 }
 #format-buttons {
-    background-color: @color12;
-    border-color: @color2;
+    background-color: @bg-base-darker;
+    border-color: @bg-base-dark;
     input {
         background-color: transparent;
         &:hover {
-            background-color: @color3;
-            color: @color0;
+            background-color: @main-accent;
+            color: @bg-base;
         }
     }
     .chosen-single {
         background-color: transparent;
         &:hover {
-            background-color: @color3;
-            color: @color0;
+            background-color: @main-accent;
+            color: @bg-base;
         }
     }
     .smilies-button>span {
         background-color: transparent;
         &:hover {
-            background-color: @color3;
-            color: @color0;
+            background-color: @main-accent;
+            color: @bg-base;
         }
     }
 }
@@ -1340,13 +1342,13 @@ blockquote {
 }
 #cp-menu {
     a {
-        color: @color1;
+        color: @font-base;
         &:hover {
-            background-color: @color2;
+            background-color: @bg-base-dark;
         }
     }
     #active-subsection>a {
-        background-color: @color2;
+        background-color: @bg-base-dark;
     }
 }
 .cp-sidebar-block {
@@ -1388,10 +1390,10 @@ blockquote {
     border-color: @color9;
     box-shadow: 0px 0px 6px @shadow-content-block;
     h3 {
-        background-color: @color4;
-        color: @color0;
+        background-color: @main-accent-highlight;
+        color: @bg-base;
         a {
-            color: @color0;
+            color: @bg-base;
             &:hover {
                 color: @color5;
             }
@@ -1401,11 +1403,11 @@ blockquote {
         }
     }
     h4 {
-        color: @color4;
+        color: @main-accent-highlight;
         a {
-            color: @color4;
+            color: @main-accent-highlight;
             &:hover {
-                color: @color3;
+                color: @main-accent;
             }
             &:active {
                 color: @color8;
@@ -1416,9 +1418,9 @@ blockquote {
         background-color: @color7;
         &:hover {
             .cp-list-icon {
-                color: @color0;
+                color: @bg-base;
                 div {
-                    background-color: @color3;
+                    background-color: @main-accent;
                 }
             }
             .pm_unread {
@@ -1429,32 +1431,32 @@ blockquote {
         }
     }
     li+li {
-        border-color: @color2;
+        border-color: @bg-base-dark;
     }
     dfn {
         color: @color5;
     }
 }
 label.cp-list-mark {
-    background-color: @color3;
-    color: @color0;
+    background-color: @main-accent;
+    color: @bg-base;
     &:active {
-        background-color: @color4;
+        background-color: @main-accent-highlight;
     }
 }
 input.cp-list-mark {
     &:checked+label.cp-list-mark {
-        background-color: @color4;
+        background-color: @main-accent-highlight;
     }
 }
 .pm_unread {
-    color: @color0;
+    color: @bg-base;
     div {
         background-color: @color13;
     }
 }
 .pm_marked_colour .cp-list-icon, .pm_replied_colour .cp-list-icon, .pm_friend_colour .cp-list-icon, .pm_foe_colour .cp-list-icon  {
-    color: @color0;
+    color: @bg-base;
 }
 .pm_marked_colour {
     .cp-list-icon {
@@ -1488,10 +1490,10 @@ input.cp-list-mark {
     border-color: @color9;
     box-shadow: 0px 0px 6px @shadow-content-block;
     th {
-        background-color: @color4;
-        color: @color0;
+        background-color: @main-accent-highlight;
+        color: @bg-base;
         a {
-            color: @color0;
+            color: @bg-base;
             &:hover {
                 color: @color5;
             }
@@ -1501,19 +1503,19 @@ input.cp-list-mark {
         }
     }
     tr+tr {
-        border-color: @color2;
+        border-color: @bg-base-dark;
     }
     td {
         background-color: @color7;
     }
     .table-group {
         td {
-            background-color: @color2;
+            background-color: @bg-base-dark;
         }
     }
 }
 @media (max-width:700px) {
     .fora-description-inner p {
-        color: @color6;
+        color: @bg-dark;
     }
 }
