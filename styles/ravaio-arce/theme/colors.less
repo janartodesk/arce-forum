@@ -1,33 +1,32 @@
 // Shadows
-@grey-3: rgba(0, 0, 0, 0.03);
-@grey-6: rgba(0, 0, 0, 0.06);
-@grey-10: rgba(0, 0, 0, 0.1);
-@grey-12: rgba(0, 0, 0, 0.12);
-@grey-24: rgba(0, 0, 0, 0.24);
-@grey-30: rgba(0, 0, 0, 0.3);
-@grey-42: rgba(0, 0, 0, 0.42);
-@grey-60: rgba(0, 0, 0, 0.6);
+@shadow-content-block: rgba(0, 0, 0, 0.18);
+@shadow-lighter: rgba(0, 0, 0, 0.1);
+@shadow-light: rgba(0, 0, 0, 0.12);
+@shadow-normal: rgba(0, 0, 0, 0.24);
+@shadow-dark: rgba(0, 0, 0, 0.3);
+@shadow-darker: rgba(0, 0, 0, 0.42);
+@shadow-darkest: rgba(0, 0, 0, 0.6);
 
 @white-10: rgba(255, 255, 255, 0.1);
 @white-18: rgba(255, 255, 255, 0.18);
 
 // Colors
-@color0: #f3f3f3;  // base-bg
-@color1: #565656;
-@color2: #e9e9e9;  // base-bg darken
+@color0: #fcfcfc;  // base-bg
+@color12: #f0f0f0;  // base-bg darker
+@color2: #d0d0d0;  // base-bg darkest, base splitters
+@color1: #242424;  // base font-face
 @color3: #2c2c2c;  // main accents highlight
 @color4: #222222;  // main accents
 @color5: #dbdbdb;
-@color6: #a0a0a0;  // base-bg darker
+@color6: #666;  // base-bg darker
 @color7: #ffffff;
 @color8: #030303;
-@color9: #eeeeee;
+@color9: #d9d9d9;  // splitter lighter
 @color10: #f44336;
 @color11: #0d0d0d;
-@color12: #fcfcfc;
 @color13: #d32f2f;  // notifications
 @color14: #ff9800;
-@color15: #a0a0a0;  // post-date
+@color15: #666;  // post-date
 @color16: #388e3c;
 @color17: #ffcfdb;
 @color18: #ff0000;
@@ -104,7 +103,7 @@ a {
 #breadcrumbs {
     li {
         &:before {
-            color: @grey-24;
+            color: @shadow-normal;
         }
     }
 }
@@ -115,7 +114,7 @@ a {
     }
 }
 #header-avatar>span {
-    background-color: @grey-30;
+    background-color: @shadow-dark;
     color: @color0 !important;
 }
 #header-avatar {
@@ -128,7 +127,7 @@ a {
         color: @color1 !important;
     }
     img {
-        border-color: @grey-24;
+        border-color: @shadow-normal;
     }
     &:hover {
         img {
@@ -153,7 +152,7 @@ a {
     }
 }
 #header-mini-menu {
-    background-color: @grey-24;
+    background-color: @shadow-normal;
     color: @color0;
     &:hover {
         background-color: @white-18;
@@ -166,16 +165,16 @@ a {
 }
 .is-sticky #header-mini-menu {
     &:hover {
-        background-color: @grey-42;
+        background-color: @shadow-darker;
         color: @color7 !important;
     }
     &:active {
-        background-color: @grey-42;
+        background-color: @shadow-darker;
         color: @color7 !important;
     }
 }
 .open>#header-mini-menu {
-    background-color: @grey-42;
+    background-color: @shadow-darker;
     color: @color7 !important;
 }
 #wrap-footer {
@@ -199,10 +198,10 @@ a {
     .box-normal {
         background-color: @color7;
         border-color: @color9;
-        box-shadow: 0px 0px 6px @grey-3;
+        box-shadow: 0px 0px 6px @shadow-content-block;
         color: @color1;
         .strong-head {
-            border-color: @grey-6;
+            border-color: @shadow-content-block;
         }
     }
 }
@@ -212,10 +211,10 @@ a {
     .box-normal {
         background-color: @color27;
         border-color: @color25;
-        box-shadow: 0px 0px 6px @grey-3;
+        box-shadow: 0px 0px 6px @shadow-content-block;
         color: @color29;
         .strong-head {
-            border-color: @grey-6;
+            border-color: @shadow-content-block;
         }
     }
     h3 {
@@ -282,12 +281,12 @@ a {
             color: @color0;
         }
         &:active {
-            background-color: @grey-10;
+            background-color: @shadow-lighter;
             color: @color0;
         }
     }
     .open>.button-round {
-        background-color: @grey-10 !important;
+        background-color: @shadow-lighter !important;
         color: @color0 !important;
     }
     .chosen-single {
@@ -311,11 +310,11 @@ a {
 .sidebar-block {
     background-color: @color7;
     border-color: @color9;
-    box-shadow: 0px 0px 6px @grey-3;
+    box-shadow: 0px 0px 6px @shadow-content-block;
 }
 .dropdown-search {
     background-color: @color7;
-    box-shadow: 0 0 30px @grey-24;
+    box-shadow: 0 0 30px @shadow-normal;
     input {
         background-color: @color2;
     }
@@ -331,7 +330,7 @@ a {
         a {
             &:hover {
                 background-color: @color7;
-                box-shadow: 0 2px 5px @grey-42;
+                box-shadow: 0 2px 5px @shadow-darker;
                 color: @color1;
             }
             &:active {
@@ -343,7 +342,7 @@ a {
         span {
             &:hover {
                 background-color: @color7;
-                box-shadow: 0 2px 5px @grey-42;
+                box-shadow: 0 2px 5px @shadow-darker;
                 color: @color1;
             }
             &:active {
@@ -415,7 +414,7 @@ a {
 }
 .fora-bg {
     border-color: @color9;
-    box-shadow: 0px 0px 6px @grey-3;
+    box-shadow: 0px 0px 6px @shadow-content-block;
     h3 {
         background-color: @color4;
         color: @color0;
@@ -532,7 +531,7 @@ a {
 }
 .forum-bg {
     border-color: @color9;
-    box-shadow: 0px 0px 6px @grey-3;
+    box-shadow: 0px 0px 6px @shadow-content-block;
     h3 {
         background-color: @color4;
         color: @color0;
@@ -615,7 +614,7 @@ a {
 .postbody {
     background-color: @color7;
     border-color: @color9;
-    box-shadow: 0px 0px 6px @grey-3;
+    box-shadow: 0px 0px 6px @shadow-content-block;
 }
 .reported {
     .postbody {
@@ -660,7 +659,7 @@ a {
 }
 .dropdown-profile {
     background-color: @color7;
-    box-shadow: 0 0 30px @grey-24;
+    box-shadow: 0 0 30px @shadow-normal;
 }
 .profile-contact {
     background-color: @color12;
@@ -725,7 +724,7 @@ a {
 }
 .dropdown-box {
     background-color: @color7;
-    box-shadow: 0 0 30px @grey-24;
+    box-shadow: 0 0 30px @shadow-normal;
     color: @color1;
     .separator {
         border-color: @color2;
@@ -744,7 +743,7 @@ a {
 }
 .dropdown-box-big {
     background-color: @color7;
-    box-shadow: 0 0 30px @grey-24;
+    box-shadow: 0 0 30px @shadow-normal;
 }
 .dropdown-body {
     color: @color1;
@@ -778,7 +777,7 @@ a {
         color: @color0;
         &:hover {
             background-color: @color3;
-            box-shadow: 0px 2px 5px @grey-42;
+            box-shadow: 0px 2px 5px @shadow-darker;
             color: @color0;
         }
         &:active {
@@ -912,7 +911,7 @@ label {
 span.radio-full {
     background-color: transparent;
     &:hover {
-        box-shadow: 0 2px 5px @grey-42;
+        box-shadow: 0 2px 5px @shadow-darker;
     }
     &:active {
         background-color: @color2;
@@ -942,7 +941,7 @@ input.check {
     color: @color0;
     &:hover {
         background-color: @color13;
-        // box-shadow: 0 2px 5px @grey-42;
+        // box-shadow: 0 2px 5px @shadow-darker;
     }
     &:focus {
         background-color: @color11;
@@ -958,7 +957,7 @@ a.button {
     color: @color0;
     &:hover {
         background-color: @color13;
-        // box-shadow: 0 2px 5px @grey-42;
+        // box-shadow: 0 2px 5px @shadow-darker;
     }
     &:active {
         background-color: @color11;
@@ -973,7 +972,7 @@ a.button {
     background-color: transparent;
     color: @color1;
     &:hover {
-        box-shadow: 0 2px 5px @grey-42;
+        box-shadow: 0 2px 5px @shadow-darker;
     }
     &:focus {
         background-color: @color2;
@@ -988,7 +987,7 @@ a.button-flat {
     background-color: transparent;
     color: @color1;
     &:hover {
-        box-shadow: 0 2px 5px @grey-42;
+        box-shadow: 0 2px 5px @shadow-darker;
     }
     &:active {
         background-color: @color2;
@@ -1000,7 +999,7 @@ a.button-flat {
     color: @color1;
     &:hover {
         background-color: @color7;
-        box-shadow: 0 2px 5px @grey-42;
+        box-shadow: 0 2px 5px @shadow-darker;
     }
     &:focus {
         background-color: @color2;
@@ -1016,7 +1015,7 @@ a.button-round {
     color: @color1;
     &:hover {
         background-color: @color7;
-        box-shadow: 0 2px 5px @grey-42;
+        box-shadow: 0 2px 5px @shadow-darker;
     }
     &:active {
         background-color: @color2;
@@ -1032,7 +1031,7 @@ a.button-round {
         background-color: @color3;
         color: @color0;
         &:hover {
-            box-shadow: 0 2px 5px @grey-42;
+            box-shadow: 0 2px 5px @shadow-darker;
         }
         &:active {
             background-color: @color11;
@@ -1048,7 +1047,7 @@ a.button-round {
 }
 .birthdays {
     &:before {
-        color: @grey-6;
+        color: @shadow-content-block;
     }
 }
 .username {
@@ -1068,15 +1067,15 @@ a.button-round {
     }
 }
 .rc-posts-out {
-    background-color: @grey-12;
+    background-color: @shadow-light;
 }
 .rc-hr {
-    border-color: @grey-24;
+    border-color: @shadow-normal;
 }
 .quickreply-box {
     background-color: @color7;
     border-color: @color9;
-    box-shadow: 0px 0px 6px @grey-3;
+    box-shadow: 0px 0px 6px @shadow-content-block;
 }
 .quickreply-buttons {
     background-color: @color12;
@@ -1131,7 +1130,7 @@ blockquote {
     }
 }
 .poll-option-resultbar {
-    background-color: @grey-3;
+    background-color: @shadow-content-block;
     div {
         background-color: @color3;
     }
@@ -1155,16 +1154,16 @@ blockquote {
 .important-box {
     background-color: @color7;
     border-color: @color22;
-    box-shadow: 0px 0px 1px @grey-10;
+    box-shadow: 0px 0px 1px @shadow-lighter;
 }
 .important-box-link {
     a {
         background-color: @color7;
         border-color: @color22;
-        box-shadow: 0px 0px 1px @grey-10;
+        box-shadow: 0px 0px 1px @shadow-lighter;
         color: @color1;
         &:hover {
-            box-shadow: 0px 2px 5px @grey-30;
+            box-shadow: 0px 2px 5px @shadow-dark;
             color: @color1;
         }
         &:active {
@@ -1258,7 +1257,7 @@ blockquote {
 }
 .chosen-drop {
     background-color: @color7;
-    box-shadow: 0 0 30px @grey-24;
+    box-shadow: 0 0 30px @shadow-normal;
     color: @color1;
     li {
         color: @color1;
@@ -1303,7 +1302,7 @@ blockquote {
 #message-box {
     background-color: @color7;
     border-color: @color9;
-    box-shadow: 0px 0px 6px @grey-3;
+    box-shadow: 0px 0px 6px @shadow-content-block;
 }
 #format-buttons {
     background-color: @color12;
@@ -1332,12 +1331,12 @@ blockquote {
 }
 .smilies-box {
     background-color: @color7;
-    box-shadow: 0 0 30px @grey-24;
+    box-shadow: 0 0 30px @shadow-normal;
 }
 #cp-menu>ul {
     background-color: @color7;
     border-color: @color9;
-    box-shadow: 0px 0px 6px @grey-3;
+    box-shadow: 0px 0px 6px @shadow-content-block;
 }
 #cp-menu {
     a {
@@ -1353,7 +1352,7 @@ blockquote {
 .cp-sidebar-block {
     background-color: @color7;
     border-color: @color9;
-    box-shadow: 0px 0px 6px @grey-3;
+    box-shadow: 0px 0px 6px @shadow-content-block;
     button {
         background-color: transparent;
         color: @color23;
@@ -1387,7 +1386,7 @@ blockquote {
 }
 .cp-list {
     border-color: @color9;
-    box-shadow: 0px 0px 6px @grey-3;
+    box-shadow: 0px 0px 6px @shadow-content-block;
     h3 {
         background-color: @color4;
         color: @color0;
@@ -1487,7 +1486,7 @@ input.cp-list-mark {
 }
 .table {
     border-color: @color9;
-    box-shadow: 0px 0px 6px @grey-3;
+    box-shadow: 0px 0px 6px @shadow-content-block;
     th {
         background-color: @color4;
         color: @color0;
