@@ -21,7 +21,7 @@
 @main-accent-highlight: #222222;  // main accents, link base
 
 @color5: #666;  // de-emphasized elements
-@color7: #ffffff;  // header highlight
+@white: #ffffff;  // header highlight
 @color8: #030303; // link visited
 @color9: #d9d9d9;  // splitter lighter
 @color10: #f44336;
@@ -32,7 +32,7 @@
 @color16: #388e3c;
 @color17: #ffcfdb;
 @color18: #ff0000;
-@color19: #000000;
+@black: #000000;
 @color20: #616161;
 @color21: #1976d2;
 @color22: #ffc3c3;
@@ -83,10 +83,11 @@ a {
 }
 .site-header {
     color: @bg-base;
+
     a {
         color: @bg-base;
         &:hover {
-            color: @main-accent;
+            color: @white;
         }
         &:active {
             color: @font-base;
@@ -95,7 +96,7 @@ a {
     span {
         color: @bg-base;
         &:hover {
-            color: @main-accent;
+            color: @white;
         }
         &:active {
             color: @font-base;
@@ -168,16 +169,16 @@ a {
 .is-sticky #header-mini-menu {
     &:hover {
         background-color: @shadow-darker;
-        color: @color7 !important;
+        color: @white !important;
     }
     &:active {
         background-color: @shadow-darker;
-        color: @color7 !important;
+        color: @white !important;
     }
 }
 .open>#header-mini-menu {
     background-color: @shadow-darker;
-    color: @color7 !important;
+    color: @white !important;
 }
 #wrap-footer {
     background-color: @color8;
@@ -191,14 +192,14 @@ a {
             color: @color5;
         }
         &:active {
-            color: @color19;
+            color: @black;
         }
     }
 }
 .background-main {
     background-color: @bg-base;
     .box-normal {
-        background-color: @color7;
+        background-color: @white;
         border-color: @color9;
         box-shadow: 0px 0px 6px @shadow-content-block;
         color: @font-base;
@@ -211,9 +212,7 @@ a {
     background-color: @bg-base-dark;
     color: @main-accent-highlight;
     .box-normal {
-        background-color: @color27;
-        border-color: @color25;
-        box-shadow: 0px 0px 6px @shadow-content-block;
+        border: none;
         color: @color29;
         .strong-head {
             border-color: @shadow-content-block;
@@ -268,7 +267,7 @@ a {
             color: @color5;
         }
         &:active {
-            color: @color19;
+            color: @black;
         }
     }
     p {
@@ -310,12 +309,12 @@ a {
     }
 }
 .sidebar-block {
-    background-color: @color7;
+    background-color: @white;
     border-color: @color9;
     box-shadow: 0px 0px 6px @shadow-content-block;
 }
 .dropdown-search {
-    background-color: @color7;
+    background-color: @white;
     box-shadow: 0 0 30px @shadow-normal;
     input {
         background-color: @bg-base-dark;
@@ -330,27 +329,27 @@ a {
 .pagination {
     li {
         a {
+            border-radius: 0;
+
             &:hover {
-                background-color: @color7;
-                box-shadow: 0 2px 5px @shadow-darker;
-                color: @font-base;
+                background-color: @main-accent;
+                color: @bg-base;
             }
             &:active {
                 background-color: @bg-base-dark;
-                box-shadow: none;
-                color: @font-base;
+                color: @bg-base;
             }
         }
         span {
+            border-radius: 0;
+
             &:hover {
-                background-color: @color7;
-                box-shadow: 0 2px 5px @shadow-darker;
-                color: @font-base;
+                background-color: @main-accent;
+                color: @bg-base;
             }
             &:active {
                 background-color: @bg-base-dark;
-                box-shadow: none;
-                color: @font-base;
+                color: @bg-base;
             }
         }
     }
@@ -358,7 +357,6 @@ a {
         span {
             &:hover {
                 background-color: transparent;
-                box-shadow: none;
             }
             &:active {
                 background-color: transparent;
@@ -367,10 +365,11 @@ a {
     }
     .active {
         span {
-            background-color: @bg-base-dark;
+            background-color: @color13;
+            color: @bg-base;
+
             &:hover {
-                background-color: @bg-base-dark;
-                box-shadow: none;
+                background-color: @color13;
             }
         }
     }
@@ -423,10 +422,10 @@ a {
         a {
             color: @bg-base;
             &:hover {
-                color: @color5;
+                color: @bg-base-darker;
             }
             &:active {
-                color: @color8;
+                color: @bg-base-dark;
             }
         }
     }
@@ -443,7 +442,7 @@ a {
         }
     }
     li {
-        background-color: @color7;
+        background-color: @white;
         &:after {
             background-color: @color9;
         }
@@ -560,7 +559,7 @@ a {
         }
     }
     li {
-        background-color: @color7;
+        background-color: @white;
         &:hover {
             .topic-icon {
                 color: @bg-base;
@@ -582,7 +581,7 @@ a {
     .deleted {
         background-color: @bg-base-darker;
         &:hover {
-            background-color: @color7;
+            background-color: @white;
         }
     }
 }
@@ -614,7 +613,7 @@ a {
     background-color: @color10;
 }
 .postbody {
-    background-color: @color7;
+    background-color: @white;
     border-color: @color9;
     box-shadow: 0px 0px 6px @shadow-content-block;
 }
@@ -660,7 +659,7 @@ a {
     border-color: @bg-base;
 }
 .dropdown-profile {
-    background-color: @color7;
+    background-color: @white;
     box-shadow: 0 0 30px @shadow-normal;
 }
 .profile-contact {
@@ -721,11 +720,11 @@ a {
     }
 }
 .preview-signature {
-    background-color: @color7;
+    background-color: @white;
     border-color: @color9;
 }
 .dropdown-box {
-    background-color: @color7;
+    background-color: @white;
     box-shadow: 0 0 30px @shadow-normal;
     color: @font-base;
     .separator {
@@ -744,7 +743,7 @@ a {
     }
 }
 .dropdown-box-big {
-    background-color: @color7;
+    background-color: @white;
     box-shadow: 0 0 30px @shadow-normal;
 }
 .dropdown-body {
@@ -999,29 +998,31 @@ a.button-flat {
 .button-round {
     background-color: transparent;
     color: @font-base;
+
     &:hover {
-        background-color: @color7;
-        box-shadow: 0 2px 5px @shadow-darker;
+        background-color: @main-accent;
+        color: @bg-base;
     }
     &:focus {
         background-color: @bg-base-dark;
-        box-shadow: none;
+        color: @bg-base;
     }
     &:active {
         background-color: @bg-base-dark;
-        box-shadow: none;
+        color: @bg-base;
     }
 }
 a.button-round {
     background-color: transparent;
     color: @font-base;
+
     &:hover {
-        background-color: @color7;
-        box-shadow: 0 2px 5px @shadow-darker;
+        background-color: @main-accent;
+        color: @bg-base;
     }
     &:active {
         background-color: @bg-base-dark;
-        box-shadow: none;
+        color: @bg-base;
     }
 }
 .open>.button-round {
@@ -1075,7 +1076,7 @@ a.button-round {
     border-color: @shadow-normal;
 }
 .quickreply-box {
-    background-color: @color7;
+    background-color: @white;
     border-color: @color9;
     box-shadow: 0px 0px 6px @shadow-content-block;
 }
@@ -1154,13 +1155,13 @@ blockquote {
     }
 }
 .important-box {
-    background-color: @color7;
+    background-color: @white;
     border-color: @color22;
     box-shadow: 0px 0px 1px @shadow-lighter;
 }
 .important-box-link {
     a {
-        background-color: @color7;
+        background-color: @white;
         border-color: @color22;
         box-shadow: 0px 0px 1px @shadow-lighter;
         color: @font-base;
@@ -1177,7 +1178,7 @@ blockquote {
     }
 }
 .modal-content {
-    background-color: @color7;
+    background-color: @white;
     box-shadow: 0 0 0 @shadow-darkest;
 }
 .modal-body {
@@ -1206,7 +1207,7 @@ blockquote {
     background-color: rgba(48, 89, 122, 0.6);
 }
 .modal-bb-content {
-    background-color: @color7;
+    background-color: @white;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.13);
 }
 .chosen-single {
@@ -1258,7 +1259,7 @@ blockquote {
     color: @bg-base;
 }
 .chosen-drop {
-    background-color: @color7;
+    background-color: @white;
     box-shadow: 0 0 30px @shadow-normal;
     color: @font-base;
     li {
@@ -1302,7 +1303,7 @@ blockquote {
     }
 }
 #message-box {
-    background-color: @color7;
+    background-color: @white;
     border-color: @color9;
     box-shadow: 0px 0px 6px @shadow-content-block;
 }
@@ -1332,11 +1333,11 @@ blockquote {
     }
 }
 .smilies-box {
-    background-color: @color7;
+    background-color: @white;
     box-shadow: 0 0 30px @shadow-normal;
 }
 #cp-menu>ul {
-    background-color: @color7;
+    background-color: @white;
     border-color: @color9;
     box-shadow: 0px 0px 6px @shadow-content-block;
 }
@@ -1352,7 +1353,7 @@ blockquote {
     }
 }
 .cp-sidebar-block {
-    background-color: @color7;
+    background-color: @white;
     border-color: @color9;
     box-shadow: 0px 0px 6px @shadow-content-block;
     button {
@@ -1415,7 +1416,7 @@ blockquote {
         }
     }
     li {
-        background-color: @color7;
+        background-color: @white;
         &:hover {
             .cp-list-icon {
                 color: @bg-base;
@@ -1506,7 +1507,7 @@ input.cp-list-mark {
         border-color: @bg-base-dark;
     }
     td {
-        background-color: @color7;
+        background-color: @white;
     }
     .table-group {
         td {
