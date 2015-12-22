@@ -1,0 +1,1520 @@
+// Shadows
+@grey-3: rgba(0, 0, 0, 0.03);
+@grey-6: rgba(0, 0, 0, 0.06);
+@grey-10: rgba(0, 0, 0, 0.1);
+@grey-12: rgba(0, 0, 0, 0.12);
+@grey-24: rgba(0, 0, 0, 0.24);
+@grey-30: rgba(0, 0, 0, 0.3);
+@grey-42: rgba(0, 0, 0, 0.42);
+@grey-60: rgba(0, 0, 0, 0.6);
+
+@white-10: rgba(255, 255, 255, 0.1);
+@white-18: rgba(255, 255, 255, 0.18);
+
+// Colors
+@color0: #f3f3f3;  // base-bg
+@color1: #565656;
+@color2: #e9e9e9;  // base-bg darken
+@color3: #2c2c2c;  // main accents highlight
+@color4: #222222;  // main accents
+@color5: #dbdbdb;
+@color6: #a0a0a0;  // base-bg darker
+@color7: #ffffff;
+@color8: #030303;
+@color9: #eeeeee;
+@color10: #f44336;
+@color11: #0d0d0d;
+@color12: #fcfcfc;
+@color13: #d32f2f;  // notifications
+@color14: #ff9800;
+@color15: #a0a0a0;  // post-date
+@color16: #388e3c;
+@color17: #ffcfdb;
+@color18: #ff0000;
+@color19: #000000;
+@color20: #616161;
+@color21: #1976d2;
+@color22: #ffc3c3;
+@color23: #4caf50;
+@color24: #ffcfbd;
+@color25: #e4e4e4;
+@color26: #fffafa;
+@color27: #f5f5f5;
+@color28: #009688;
+@color29: #4c4c4c;
+
+
+
+body {
+    background-color: @color0;
+    color: @color1;
+}
+html {
+    background-color: @color0;
+    color: @color1;
+}
+select {
+    background-color: transparent;
+    border-color: @color5;
+}
+a {
+    color: @color4;
+    &:visited {
+        color: @color4;
+    }
+    &:hover {
+        color: @color3;
+    }
+    &:active {
+        color: @color8;
+    }
+}
+#wrap-header {
+    background-color: @color13;
+}
+#wrap-header-index {
+    background-color: transparent;
+}
+.is-sticky {
+    #wrap-header-index {
+        background-color: @color13;
+    }
+}
+.site-header {
+    color: @color0;
+    a {
+        color: @color0;
+        &:hover {
+            color: @color5;
+        }
+        &:active {
+            color: @color6;
+        }
+    }
+    span {
+        color: @color0;
+        &:hover {
+            color: @color5;
+        }
+        &:active {
+            color: @color6;
+        }
+    }
+}
+#breadcrumbs {
+    li {
+        &:before {
+            color: @grey-24;
+        }
+    }
+}
+.site-nav {
+    .count {
+        background-color: @color10;
+        color: @color0;
+    }
+}
+#header-avatar>span {
+    background-color: @grey-30;
+    color: @color0 !important;
+}
+#header-avatar {
+    &:hover>span {
+        background-color: @color5;
+        color: @color1 !important;
+    }
+    &:active>span {
+        background-color: @color6;
+        color: @color1 !important;
+    }
+    img {
+        border-color: @grey-24;
+    }
+    &:hover {
+        img {
+            border-color: @color5;
+        }
+    }
+    &:active {
+        img {
+            border-color: @color6;
+        }
+    }
+}
+.open {
+    #header-avatar>span {
+        background-color: @color6;
+        color: @color1 !important;
+    }
+    #header-avatar {
+        img {
+            border-color: @color6;
+        }
+    }
+}
+#header-mini-menu {
+    background-color: @grey-24;
+    color: @color0;
+    &:hover {
+        background-color: @white-18;
+        color: @color1 !important;
+    }
+    &:active {
+        background-color: @white-18;
+        color: @color1 !important;
+    }
+}
+.is-sticky #header-mini-menu {
+    &:hover {
+        background-color: @grey-42;
+        color: @color7 !important;
+    }
+    &:active {
+        background-color: @grey-42;
+        color: @color7 !important;
+    }
+}
+.open>#header-mini-menu {
+    background-color: @grey-42;
+    color: @color7 !important;
+}
+#wrap-footer {
+    background-color: @color8;
+    color: @color6;
+    a {
+        color: @color0;
+        &:visited {
+            color: @color0;
+        }
+        &:hover {
+            color: @color5;
+        }
+        &:active {
+            color: @color19;
+        }
+    }
+}
+.background-main {
+    background-color: @color0;
+    .box-normal {
+        background-color: @color7;
+        border-color: @color9;
+        box-shadow: 0px 0px 6px @grey-3;
+        color: @color1;
+        .strong-head {
+            border-color: @grey-6;
+        }
+    }
+}
+.background-deep {
+    background-color: @color2;
+    color: @color4;
+    .box-normal {
+        background-color: @color27;
+        border-color: @color25;
+        box-shadow: 0px 0px 6px @grey-3;
+        color: @color29;
+        .strong-head {
+            border-color: @grey-6;
+        }
+    }
+    h3 {
+        color: @color4;
+        a {
+            color: @color4;
+            &:hover {
+                color: @color3;
+            }
+            &:active {
+                color: @color8;
+            }
+        }
+    }
+}
+#information {
+    background-color: @color10;
+    color: @color0;
+}
+#site-desc-full {
+    background-color: @color8;
+    h1 {
+        color: @color0;
+    }
+    h2 {
+        color: @color0;
+    }
+}
+#site-desc-small {
+    background-color: @color8;
+    h1 {
+        color: @color0;
+    }
+    h2 {
+        color: @color0;
+    }
+}
+#sub-header {
+    background-color: @color8;
+}
+.sub-header-title {
+    color: @color0;
+    a {
+        color: @color0;
+        &:visited {
+            color: @color0;
+        }
+        &:hover {
+            color: @color5;
+        }
+        &:active {
+            color: @color19;
+        }
+    }
+    p {
+        color: @color6;
+    }
+}
+.sub-header-buttons {
+    .button-round {
+        color: @color0;
+        &:hover {
+            background-color: @white-10;
+            color: @color0;
+        }
+        &:active {
+            background-color: @grey-10;
+            color: @color0;
+        }
+    }
+    .open>.button-round {
+        background-color: @grey-10 !important;
+        color: @color0 !important;
+    }
+    .chosen-single {
+        color: @color0;
+        &:hover {
+            color: @color0;
+        }
+        &:active {
+            color: @color0;
+        }
+    }
+}
+#main-search-box-md {
+    input {
+        background-color: @color2;
+    }
+    button {
+        background-color: @color2;
+    }
+}
+.sidebar-block {
+    background-color: @color7;
+    border-color: @color9;
+    box-shadow: 0px 0px 6px @grey-3;
+}
+.dropdown-search {
+    background-color: @color7;
+    box-shadow: 0 0 30px @grey-24;
+    input {
+        background-color: @color2;
+    }
+}
+.action-bar-top {
+    border-bottom-color: @color2;
+}
+.action-bar-bottom {
+    border-top-color: @color2;
+}
+.pagination {
+    li {
+        a {
+            &:hover {
+                background-color: @color7;
+                box-shadow: 0 2px 5px @grey-42;
+                color: @color1;
+            }
+            &:active {
+                background-color: @color2;
+                box-shadow: none;
+                color: @color1;
+            }
+        }
+        span {
+            &:hover {
+                background-color: @color7;
+                box-shadow: 0 2px 5px @grey-42;
+                color: @color1;
+            }
+            &:active {
+                background-color: @color2;
+                box-shadow: none;
+                color: @color1;
+            }
+        }
+    }
+    .ellipsis {
+        span {
+            &:hover {
+                background-color: transparent;
+                box-shadow: none;
+            }
+            &:active {
+                background-color: transparent;
+            }
+        }
+    }
+    .active {
+        span {
+            background-color: @color2;
+            &:hover {
+                background-color: @color2;
+                box-shadow: none;
+            }
+        }
+    }
+}
+.pagination-small {
+    li {
+        a {
+            border-color: @color2;
+        }
+        span {
+            border-color: @color2;
+        }
+    }
+}
+.member-search {
+    background-color: @color4;
+    a {
+        color: @color0;
+        &:visited {
+            color: @color0;
+        }
+    }
+}
+.search-box {
+    input {
+        background-color: transparent;
+        border-color: @color4;
+        color: @color0;
+        &::-moz-placeholder {
+            color: @white-18;
+        }
+        &:hover {
+            border-color: @color3;
+        }
+        &:focus {
+            border-color: @color3;
+        }
+    }
+    button {
+        background-color: transparent;
+        color: @color0;
+    }
+}
+.fora-bg {
+    border-color: @color9;
+    box-shadow: 0px 0px 6px @grey-3;
+    h3 {
+        background-color: @color4;
+        color: @color0;
+        a {
+            color: @color0;
+            &:hover {
+                color: @color5;
+            }
+            &:active {
+                color: @color8;
+            }
+        }
+    }
+    h4 {
+        color: @color4;
+        a {
+            color: @color4;
+            &:hover {
+                color: @color3;
+            }
+            &:active {
+                color: @color8;
+            }
+        }
+    }
+    li {
+        background-color: @color7;
+        &:after {
+            background-color: @color9;
+        }
+        &:hover {
+            .fora-icon {
+                color: @color0;
+                div {
+                    background-color: @color3;
+                }
+            }
+            .forum_unread {
+                div {
+                    background-color: @color10;
+                }
+            }
+            .forum_unread_locked {
+                div {
+                    background-color: @color10;
+                }
+            }
+            .forum_unread_subforum {
+                div {
+                    background-color: @color10;
+                }
+            }
+        }
+    }
+    dfn {
+        color: @color5;
+    }
+}
+.fora-icon {
+    color: @color4;
+    div {
+        background-color: transparent;
+    }
+}
+.feed-icon {
+    color: @color5;
+    &:visited {
+        color: @color5;
+    }
+    &:hover {
+        color: @color14;
+    }
+    &:active {
+        color: @color14;
+    }
+}
+.forum_unread {
+    color: @color0;
+    div {
+        background-color: @color13;
+    }
+}
+.forum_unread_locked {
+    color: @color0;
+    div {
+        background-color: @color13;
+    }
+}
+.forum_unread_subforum {
+    color: @color0;
+    div {
+        background-color: @color13;
+    }
+}
+.fora-stats-sm {
+    color: @color6;
+}
+.subforums-list {
+    &:after {
+        color: @color5;
+    }
+}
+.fora-unapproved-icon {
+    color: @color14;
+    &:visited {
+        color: @color14;
+    }
+    &:hover {
+        color: @color3;
+    }
+    &:active {
+        color: @color8;
+    }
+}
+.forum-bg {
+    border-color: @color9;
+    box-shadow: 0px 0px 6px @grey-3;
+    h3 {
+        background-color: @color4;
+        color: @color0;
+        a {
+            color: @color0;
+            &:hover {
+                color: @color5;
+            }
+            &:active {
+                color: @color8;
+            }
+        }
+    }
+    h4 {
+        color: @color4;
+        a {
+            color: @color4;
+            &:hover {
+                color: @color3;
+            }
+            &:active {
+                color: @color8;
+            }
+        }
+    }
+    li {
+        background-color: @color7;
+        &:hover {
+            .topic-icon {
+                color: @color0;
+                div {
+                    background-color: @color3;
+                }
+            }
+        }
+    }
+    ol>li+li {
+        border-color: @color2;
+    }
+    dfn {
+        color: @color5;
+    }
+    .reported {
+        background-color: @color26;
+    }
+    .deleted {
+        background-color: @color12;
+        &:hover {
+            background-color: @color7;
+        }
+    }
+}
+.topic-icon {
+    color: @color4;
+    div {
+        background-color: transparent;
+    }
+}
+.topic-stats-sm {
+    color: @color6;
+}
+.topic-unapproved-icon {
+    color: @color14;
+}
+.topic-deleted-icon {
+    color: @color28;
+}
+.topic-reported-icon {
+    color: @color10;
+}
+.topic_unread, .topic_unread_mine, .topic_unread_locked, .topic_unread_locked_mine, .topic_unread_hot, .topic_unread_hot_mine, .sticky_unread .sticky_unread_locked, .sticky_unread_locked_mine, .sticky_unread_mine, .announce_unread, .announce_unread_locked, .announce_unread_locked_mine, .announce_unread_mine, .global_unread, .global_unread_locked, .global_unread_locked_mine, .global_unread_mine  {
+    color: @color0;
+}
+.topic_unread div, .topic_unread_mine div, .topic_unread_locked div, .topic_unread_locked_mine div, .topic_unread_hot div, .topic_unread_hot_mine div, .sticky_unread div, .sticky_unread_locked div, .sticky_unread_locked_mine div, .sticky_unread_mine div, .announce_unread div, .announce_unread_locked div, .announce_unread_locked_mine div, .announce_unread_mine div, .global_unread div, .global_unread_locked div, .global_unread_locked_mine div, .global_unread_mine div  {
+    background-color: @color13;
+}
+.forum-bg li:hover .topic_unread div, .forum-bg li:hover .topic_unread_mine div, .forum-bg li:hover .topic_unread_locked div, .forum-bg li:hover .topic_unread_locked_mine div, .forum-bg li:hover .topic_unread_hot div, .forum-bg li:hover .topic_unread_hot_mine div, .forum-bg li:hover .sticky_unread div, .forum-bg li:hover .sticky_unread_locked div, .forum-bg li:hover .sticky_unread_locked_mine div, .forum-bg li:hover .sticky_unread_mine div, .forum-bg li:hover .announce_unread div, .forum-bg li:hover .announce_unread_locked div, .forum-bg li:hover .announce_unread_locked_mine div, .forum-bg li:hover .announce_unread_mine div, .forum-bg li:hover .global_unread div, .forum-bg li:hover .global_unread_locked div, .forum-bg li:hover .global_unread_locked_mine div, .forum-bg li:hover .global_unread_mine div  {
+    background-color: @color10;
+}
+.postbody {
+    background-color: @color7;
+    border-color: @color9;
+    box-shadow: 0px 0px 6px @grey-3;
+}
+.reported {
+    .postbody {
+        border-color: @color17;
+    }
+}
+.unapproved {
+    .postbody {
+        border-color: @color24;
+    }
+}
+.post-deleted-notice {
+    input {
+        background-color: @color2;
+        color: @color1;
+    }
+}
+.post-unapproved-notice {
+    input {
+        background-color: @color2;
+        color: @color1;
+    }
+}
+.post-reported-notice {
+    background-color: @color17;
+}
+.attachbox {
+    background-color: @color12;
+    border-color: @color5;
+}
+.g-image {
+    &:after {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    &:before {
+        color: @color0;
+    }
+}
+.poster-online {
+    background-color: @color16;
+    border-color: @color7;
+}
+.dropdown-profile {
+    background-color: @color7;
+    box-shadow: 0 0 30px @grey-24;
+}
+.profile-contact {
+    background-color: @color12;
+    border-color: @color2;
+}
+.member-online {
+    color: @color16;
+}
+.post-number {
+    color: @color15;
+    &:visited {
+        color: @color15;
+    }
+    &:hover {
+        color: @color3;
+    }
+    &:active {
+        color: @color8;
+    }
+}
+.post-signature {
+    border-color: @color2;
+}
+.post-actions {
+    background-color: @color12;
+    border-color: @color2;
+}
+.post-date {
+    color: @color15;
+    &:hover {
+        color: @color3;
+    }
+    a {
+        color: @color15;
+        &:visited {
+            color: @color15;
+        }
+        &:hover {
+            color: @color3;
+        }
+        &:active {
+            color: @color8;
+        }
+    }
+}
+.avatar-none {
+    background-color: @color2;
+    color: @color6;
+    .username-coloured {
+        color: @color6 !important;
+        &:hover {
+            color: @color6 !important;
+        }
+        &:active {
+            color: @color6 !important;
+        }
+    }
+}
+.preview-signature {
+    background-color: @color7;
+    border-color: @color9;
+}
+.dropdown-box {
+    background-color: @color7;
+    box-shadow: 0 0 30px @grey-24;
+    color: @color1;
+    .separator {
+        border-color: @color2;
+    }
+    a {
+        color: @color1;
+        &:hover {
+            background-color: @color2;
+            color: @color1;
+        }
+        &:active {
+            background-color: @color8;
+            color: @color5;
+        }
+    }
+}
+.dropdown-box-big {
+    background-color: @color7;
+    box-shadow: 0 0 30px @grey-24;
+}
+.dropdown-body {
+    color: @color1;
+    a {
+        color: @color1;
+        &:hover {
+            background-color: @color2;
+            color: @color1;
+        }
+        &:active {
+            background-color: @color8;
+            color: @color5;
+        }
+    }
+    li {
+        border-color: @color2;
+    }
+    .notification-title {
+        .username {
+            color: @color1 !important;
+        }
+        .username-coloured {
+            color: @color1 !important;
+        }
+    }
+    .notification-time {
+        color: @color6;
+    }
+    .notification-mark {
+        background-color: @color3;
+        color: @color0;
+        &:hover {
+            background-color: @color3;
+            box-shadow: 0px 2px 5px @grey-42;
+            color: @color0;
+        }
+        &:active {
+            background-color: @color11;
+            box-shadow: none;
+            color: @color0;
+        }
+    }
+    .chosen-drop {
+        background-color: transparent;
+        box-shadow: none;
+    }
+    select {
+        background-color: transparent;
+    }
+}
+.dropdown-header {
+    background-color: @color2;
+    color: @color1;
+    a {
+        color: @color1;
+        &:hover {
+            color: @color3;
+        }
+        &:active {
+            color: @color5;
+        }
+    }
+}
+.dropdown-footer {
+    a {
+        background-color: @color2;
+        color: @color1;
+        &:hover {
+            background-color: @color3;
+            color: @color0;
+        }
+    }
+    input {
+        background-color: @color2;
+        color: @color1;
+        &:hover {
+            background-color: @color3;
+            color: @color0;
+        }
+    }
+}
+.dropdown-footer a:active, .dropdown-footer input:active, .dropdown-footer a:focus, .dropdown-footer input:focus  {
+    background-color: @color4;
+    color: @color0;
+}
+.live-search {
+    .search-result {
+        color: @color1;
+        &:hover {
+            background-color: @color2;
+            color: @color1;
+        }
+        &:active {
+            background-color: @color8;
+            color: @color5;
+        }
+    }
+}
+.input {
+    background-color: transparent;
+    border-color: @color5;
+    color: @color1;
+    &:hover {
+        border-color: @color3;
+    }
+    &:focus {
+        border-color: @color11;
+        outline: none;
+    }
+}
+input {
+    &:invalid {
+        border-color: @color18 !important;
+        box-shadow: 0 2px 0 @color18;
+        outline: none;
+    }
+}
+span.radio {
+    background-color: transparent;
+    border-color: @color4;
+}
+input.radio {
+    &:checked+span.radio {
+        background-color: @color4;
+    }
+    &:disabled+span.radio {
+        background-color: transparent !important;
+        border-color: @color6 !important;
+    }
+}
+label {
+    &:hover>span.radio {
+        border-color: @color3;
+    }
+    &:hover>input.radio {
+        checked+span.radio {
+            background-color: @color3;
+            border-color: @color3;
+        }
+    }
+    &:active>span.radio {
+        background-color: @color4 !important;
+        border-color: @color4 !important;
+    }
+    &:active>input.radio {
+        disabled+span.radio {
+            background-color: transparent !important;
+            border-color: @color6 !important;
+        }
+    }
+    &:hover>span.check {
+        border-color: @color3;
+    }
+    &:hover>input.check {
+        checked+span.check {
+            background-color: @color3;
+            border-color: @color3;
+        }
+    }
+    &:active>span.check {
+        background-color: @color4 !important;
+        border-color: @color4 !important;
+    }
+}
+span.radio-full {
+    background-color: transparent;
+    &:hover {
+        box-shadow: 0 2px 5px @grey-42;
+    }
+    &:active {
+        background-color: @color2;
+        box-shadow: none;
+    }
+}
+input.radio-full {
+    &:checked+span.radio-full {
+        background-color: @color2;
+        box-shadow: none;
+    }
+}
+span.check {
+    background-color: transparent;
+    border-color: @color4;
+    &:after {
+        color: @color0;
+    }
+}
+input.check {
+    &:checked+span.check {
+        background-color: @color4;
+    }
+}
+.button {
+    background-color: @color3;
+    color: @color0;
+    &:hover {
+        background-color: @color13;
+        // box-shadow: 0 2px 5px @grey-42;
+    }
+    &:focus {
+        background-color: @color11;
+        // box-shadow: none;
+    }
+    &:active {
+        background-color: @color11;
+        // box-shadow: none;
+    }
+}
+a.button {
+    background-color: @color3;
+    color: @color0;
+    &:hover {
+        background-color: @color13;
+        // box-shadow: 0 2px 5px @grey-42;
+    }
+    &:active {
+        background-color: @color11;
+        // box-shadow: none;
+    }
+}
+.open>.button {
+    background-color: @color11 !important;
+    box-shadow: none !important;
+}
+.button-flat {
+    background-color: transparent;
+    color: @color1;
+    &:hover {
+        box-shadow: 0 2px 5px @grey-42;
+    }
+    &:focus {
+        background-color: @color2;
+        box-shadow: none;
+    }
+    &:active {
+        background-color: @color2;
+        box-shadow: none;
+    }
+}
+a.button-flat {
+    background-color: transparent;
+    color: @color1;
+    &:hover {
+        box-shadow: 0 2px 5px @grey-42;
+    }
+    &:active {
+        background-color: @color2;
+        box-shadow: none;
+    }
+}
+.button-round {
+    background-color: transparent;
+    color: @color1;
+    &:hover {
+        background-color: @color7;
+        box-shadow: 0 2px 5px @grey-42;
+    }
+    &:focus {
+        background-color: @color2;
+        box-shadow: none;
+    }
+    &:active {
+        background-color: @color2;
+        box-shadow: none;
+    }
+}
+a.button-round {
+    background-color: transparent;
+    color: @color1;
+    &:hover {
+        background-color: @color7;
+        box-shadow: 0 2px 5px @grey-42;
+    }
+    &:active {
+        background-color: @color2;
+        box-shadow: none;
+    }
+}
+.open>.button-round {
+    background-color: @color2 !important;
+    box-shadow: none !important;
+}
+.button-multiple {
+    a {
+        background-color: @color3;
+        color: @color0;
+        &:hover {
+            box-shadow: 0 2px 5px @grey-42;
+        }
+        &:active {
+            background-color: @color11;
+            box-shadow: none;
+        }
+    }
+}
+.statistics {
+    border-color: @color5;
+}
+.member-statistics {
+    border-color: @color5;
+}
+.birthdays {
+    &:before {
+        color: @grey-6;
+    }
+}
+.username {
+    &:hover {
+        color: @color3 !important;
+    }
+    &:active {
+        color: @color8 !important;
+    }
+}
+.username-coloured {
+    &:hover {
+        color: @color3 !important;
+    }
+    &:active {
+        color: @color8 !important;
+    }
+}
+.rc-posts-out {
+    background-color: @grey-12;
+}
+.rc-hr {
+    border-color: @grey-24;
+}
+.quickreply-box {
+    background-color: @color7;
+    border-color: @color9;
+    box-shadow: 0px 0px 6px @grey-3;
+}
+.quickreply-buttons {
+    background-color: @color12;
+    border-color: @color2;
+    button {
+        background-color: transparent;
+        color: @color1;
+        display: inline-block;
+    }
+}
+.dimmed {
+    color: @color6;
+}
+blockquote {
+    background-color: @color12;
+    border-color: @color2;
+}
+.codebox {
+    background-color: @color12;
+    border-color: @color2;
+}
+.post-content {
+    border-color: @color2;
+}
+.posthilit {
+    background-color: @color3;
+    color: @color0;
+}
+.details {
+    dt {
+        color: @color6;
+    }
+}
+.faq {
+    dt {
+        color: @color6;
+    }
+}
+.form {
+    dt {
+        span {
+            color: @color1;
+        }
+        p {
+            color: @color6;
+        }
+    }
+}
+.poll-option-title {
+    span.votes {
+        color: @color6;
+    }
+}
+.poll-option-resultbar {
+    background-color: @grey-3;
+    div {
+        background-color: @color3;
+    }
+}
+.background-normal {
+    background-color: @color0;
+    color: @color4;
+    h3 {
+        color: @color4;
+        a {
+            color: @color4;
+            &:hover {
+                color: @color3;
+            }
+            &:active {
+                color: @color8;
+            }
+        }
+    }
+}
+.important-box {
+    background-color: @color7;
+    border-color: @color22;
+    box-shadow: 0px 0px 1px @grey-10;
+}
+.important-box-link {
+    a {
+        background-color: @color7;
+        border-color: @color22;
+        box-shadow: 0px 0px 1px @grey-10;
+        color: @color1;
+        &:hover {
+            box-shadow: 0px 2px 5px @grey-30;
+            color: @color1;
+        }
+        &:active {
+            background-color: @color2;
+            border-color: @color2;
+            box-shadow: none;
+            color: @color1;
+        }
+    }
+}
+.modal-content {
+    background-color: @color7;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.13);
+}
+.modal-body {
+    .w-input {
+        color: @color6;
+    }
+}
+.modal-backdrop {
+    background-color: rgba(48, 89, 122, 0.6);
+}
+.modal-close {
+    background-color: transparent;
+    color: @color1;
+}
+.modal-bb-close {
+    background-color: transparent;
+    color: @color1;
+}
+.error {
+    color: @color10;
+}
+.notification-unread {
+    background-color: @color10;
+}
+#darkenwrapper {
+    background-color: rgba(48, 89, 122, 0.6);
+}
+.modal-bb-content {
+    background-color: @color7;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.13);
+}
+.chosen-single {
+    border-bottom-color: @color5;
+    color: @color1;
+    &:hover {
+        border-bottom-color: @color3;
+        color: @color1;
+    }
+    &:focus {
+        border-color: @color11;
+        color: @color1;
+    }
+}
+.chosen-choices {
+    &:hover {
+        input {
+            border-bottom-color: @color3;
+            color: @color1;
+        }
+    }
+    &:focus {
+        input {
+            border-color: @color11;
+            color: @color1;
+        }
+    }
+}
+.search-field {
+    input {
+        background-color: transparent;
+        border-bottom-color: @color5;
+        color: @color1;
+        &:hover {
+            border-bottom-color: @color3;
+            color: @color1;
+        }
+        &:focus {
+            border-color: @color11;
+            color: @color1;
+        }
+    }
+}
+.search-choice {
+    background-color: @color4;
+    color: @color0;
+}
+.search-choice-close {
+    color: @color0;
+}
+.chosen-drop {
+    background-color: @color7;
+    box-shadow: 0 0 30px @grey-24;
+    color: @color1;
+    li {
+        color: @color1;
+        &:hover {
+            background-color: @color2;
+            color: @color1;
+        }
+        &:active {
+            background-color: @color8;
+            color: @color5;
+        }
+    }
+    li.result-selected {
+        color: @color6;
+        &:hover {
+            background-color: transparent;
+            color: @color6;
+        }
+        &:active {
+            background-color: transparent;
+            color: @color6;
+        }
+    }
+}
+.chosen-search {
+    input {
+        background-color: @color2;
+    }
+}
+.group-result {
+    background-color: @color2 !important;
+    color: @color1 !important;
+    &:hover {
+        background-color: @color2 !important;
+        color: @color1 !important;
+    }
+    &:active {
+        background-color: @color2 !important;
+        color: @color1 !important;
+    }
+}
+#message-box {
+    background-color: @color7;
+    border-color: @color9;
+    box-shadow: 0px 0px 6px @grey-3;
+}
+#format-buttons {
+    background-color: @color12;
+    border-color: @color2;
+    input {
+        background-color: transparent;
+        &:hover {
+            background-color: @color3;
+            color: @color0;
+        }
+    }
+    .chosen-single {
+        background-color: transparent;
+        &:hover {
+            background-color: @color3;
+            color: @color0;
+        }
+    }
+    .smilies-button>span {
+        background-color: transparent;
+        &:hover {
+            background-color: @color3;
+            color: @color0;
+        }
+    }
+}
+.smilies-box {
+    background-color: @color7;
+    box-shadow: 0 0 30px @grey-24;
+}
+#cp-menu>ul {
+    background-color: @color7;
+    border-color: @color9;
+    box-shadow: 0px 0px 6px @grey-3;
+}
+#cp-menu {
+    a {
+        color: @color1;
+        &:hover {
+            background-color: @color2;
+        }
+    }
+    #active-subsection>a {
+        background-color: @color2;
+    }
+}
+.cp-sidebar-block {
+    background-color: @color7;
+    border-color: @color9;
+    box-shadow: 0px 0px 6px @grey-3;
+    button {
+        background-color: transparent;
+        color: @color23;
+    }
+}
+.pm-legend.pm_marked_colour {
+    &:before {
+        background-color: @color21;
+    }
+}
+.pm-legend.pm_replied_colour {
+    &:before {
+        background-color: @color20;
+    }
+}
+.pm-legend.pm_friend_colour {
+    &:before {
+        background-color: @color16;
+    }
+}
+.pm-legend.pm_foe_colour {
+    &:before {
+        background-color: @color13;
+    }
+}
+.cp-rec-list {
+    button {
+        background-color: transparent;
+        color: @color10;
+    }
+}
+.cp-list {
+    border-color: @color9;
+    box-shadow: 0px 0px 6px @grey-3;
+    h3 {
+        background-color: @color4;
+        color: @color0;
+        a {
+            color: @color0;
+            &:hover {
+                color: @color5;
+            }
+            &:active {
+                color: @color8;
+            }
+        }
+    }
+    h4 {
+        color: @color4;
+        a {
+            color: @color4;
+            &:hover {
+                color: @color3;
+            }
+            &:active {
+                color: @color8;
+            }
+        }
+    }
+    li {
+        background-color: @color7;
+        &:hover {
+            .cp-list-icon {
+                color: @color0;
+                div {
+                    background-color: @color3;
+                }
+            }
+            .pm_unread {
+                div {
+                    background-color: @color10;
+                }
+            }
+        }
+    }
+    li+li {
+        border-color: @color2;
+    }
+    dfn {
+        color: @color5;
+    }
+}
+label.cp-list-mark {
+    background-color: @color3;
+    color: @color0;
+    &:active {
+        background-color: @color4;
+    }
+}
+input.cp-list-mark {
+    &:checked+label.cp-list-mark {
+        background-color: @color4;
+    }
+}
+.pm_unread {
+    color: @color0;
+    div {
+        background-color: @color13;
+    }
+}
+.pm_marked_colour .cp-list-icon, .pm_replied_colour .cp-list-icon, .pm_friend_colour .cp-list-icon, .pm_foe_colour .cp-list-icon  {
+    color: @color0;
+}
+.pm_marked_colour {
+    .cp-list-icon {
+        div {
+            background-color: @color21;
+        }
+    }
+}
+.pm_replied_colour {
+    .cp-list-icon {
+        div {
+            background-color: @color20;
+        }
+    }
+}
+.pm_friend_colour {
+    .cp-list-icon {
+        div {
+            background-color: @color16;
+        }
+    }
+}
+.pm_foe_colour {
+    .cp-list-icon {
+        div {
+            background-color: @color13;
+        }
+    }
+}
+.table {
+    border-color: @color9;
+    box-shadow: 0px 0px 6px @grey-3;
+    th {
+        background-color: @color4;
+        color: @color0;
+        a {
+            color: @color0;
+            &:hover {
+                color: @color5;
+            }
+            &:active {
+                color: @color8;
+            }
+        }
+    }
+    tr+tr {
+        border-color: @color2;
+    }
+    td {
+        background-color: @color7;
+    }
+    .table-group {
+        td {
+            background-color: @color2;
+        }
+    }
+}
+@media (max-width:700px) {
+    .fora-description-inner p {
+        color: @color6;
+    }
+}
