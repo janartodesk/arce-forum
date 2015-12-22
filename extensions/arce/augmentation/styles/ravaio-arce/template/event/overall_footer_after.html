@@ -1,0 +1,14 @@
+<script>
+$(document).ready(function() {
+	var
+		minheight = $(window).height(),
+		minheightwrap = $('#wrap').height(),
+		mainheight = $('#mbrs').outerHeight();
+
+	// Make header sticky
+	$('#wrap-header, #wrap-header-index').sticky({topSpacing:0});
+	// Push the footer to the bottom
+	if(minheight > minheightwrap) $('#mbrs').css('min-height', minheight-minheightwrap+mainheight);
+});
+</script>
+<!-- INCLUDEJS jquery.sticky.js -->

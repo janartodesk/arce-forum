@@ -1,0 +1,21 @@
+{
+	"name": "arce/augmentation",
+	"type": "phpbb-extension",
+	"description": "Bits and pieces for forum augmentation",
+	"version": "1.0.0",
+	"license": "MIT",
+	"authors": [{
+			"name": "Janar Todesk",
+			"email": "j.todesk@gmail.com",
+			"homepage": "http://github.com/janartodesk"
+		}],
+	"require": {
+		"php": ">=5.3.3"
+	},
+	"extra": {
+		"display-name": "ARCE forum extensions",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.1.5,<3.2.*@dev"
+		}
+	}
+}
