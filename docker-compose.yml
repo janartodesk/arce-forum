@@ -14,4 +14,4 @@ database:
     - MYSQL_ROOT_PASSWORD=phpbb
     - MYSQL_DATABASE=phpbb
     - MYSQL_USER=phpbb
-    - MYSQL_DATABASE=phpbb
+    - MYSQL_PASSWORD=phpbb
