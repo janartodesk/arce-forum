@@ -736,7 +736,7 @@ a {
         background-color: $bg-base-dark;
         color: $bg-dark;
 
-        .username-coloured {
+        a {
             color: $bg-dark !important;
             font-size: 0;
             &:hover {
