@@ -11,7 +11,7 @@ phpbb:
 database:
   image: mysql:latest
   environment:
-    - MYSQL_ROOT_PASSWORD=phpbb
-    - MYSQL_DATABASE=phpbb
-    - MYSQL_USER=phpbb
-    - MYSQL_PASSWORD=phpbb
+    MYSQL_ROOT_PASSWORD: phpbb
+    MYSQL_DATABASE: phpbb
+    MYSQL_USER: phpbb
+    MYSQL_PASSWORD: phpbb
