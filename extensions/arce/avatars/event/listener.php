@@ -20,18 +20,12 @@ class listener implements EventSubscriberInterface
     /** Max size to display */
     private $avatar_size = 132;
 
-    protected $user;
-    protected $config;
     protected $request;
-    protected $db;
     protected $mimetype_guesser;
 
     public function __construct(\phpbb\request\request $request, \phpbb\mimetype\guesser $mimetype_guesser)
     {
-        $this->user = $user;
-        $this->config = $config;
         $this->request = $request;
-        $this->db = $db;
         $this->mimetype_guesser = $mimetype_guesser;
     }
 
