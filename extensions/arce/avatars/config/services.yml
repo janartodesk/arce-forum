@@ -1,0 +1,9 @@
+---
+services:
+  arce.avatars.listener:
+    class: arce\avatars\event\listener
+    arguments:
+      - '@request'
+      - '@mimetype.guesser'
+    tags:
+      - name: event.listener
